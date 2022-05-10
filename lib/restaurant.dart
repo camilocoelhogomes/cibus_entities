@@ -19,8 +19,8 @@ class Restaurant {
 }
 
 class CustomRestaurant extends Restaurant {
-  CustomPallet? customPallet;
-  CustomFonts? customFonts;
+  BasicCustomColors basicCustomColors;
+  BasicCustomFonts customFonts;
 
   CustomRestaurant({
     required String url,
@@ -29,8 +29,8 @@ class CustomRestaurant extends Restaurant {
     required String phoneNumber,
     required String logo,
     required Menu menu,
-    CustomPallet? customPallet,
-    CustomFonts? customFonts,
+    required this.basicCustomColors,
+    required this.customFonts,
   }) : super(
           url: url,
           name: name,
