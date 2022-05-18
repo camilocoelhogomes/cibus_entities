@@ -1,5 +1,6 @@
 library entities;
 
+part 'image.dart';
 part 'menu.dart';
 part 'authentication.dart';
 part 'restaurant.dart';

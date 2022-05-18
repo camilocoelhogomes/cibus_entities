@@ -3,8 +3,8 @@ part of entities;
 class OrderItem extends MenuItem {
   OrderItem({
     required int id,
-    required List<String> imgUrls,
-    required String defaultImgUrl,
+    required List<Image> imgList,
+    required int defaultImg,
     required String name,
     required int priceInCents,
     required String description,
@@ -13,8 +13,8 @@ class OrderItem extends MenuItem {
     required this.restaurant,
   }) : super(
           id: id,
-          imgUrls: imgUrls,
-          defaultImgUrl: defaultImgUrl,
+          imgList: imgList,
+          defaultImg: defaultImg,
           name: name,
           priceInCents: priceInCents,
           description: description,

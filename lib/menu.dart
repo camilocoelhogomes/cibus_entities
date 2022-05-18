@@ -23,15 +23,15 @@ class MenuExtraItem {
 class MenuItem {
   int id;
   Category category;
-  List<String> imgUrls;
-  String defaultImgUrl;
+  List<Image> imgList;
+  int defaultImg;
   String name;
   int priceInCents;
   String description;
   MenuItem({
     required this.id,
-    required this.imgUrls,
-    required this.defaultImgUrl,
+    required this.imgList,
+    required this.defaultImg,
     required this.name,
     required this.priceInCents,
     required this.description,
