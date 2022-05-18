@@ -10,6 +10,7 @@ class OrderItem extends MenuItem {
     required String description,
     required Category category,
     required this.extras,
+    required this.restaurant,
   }) : super(
           id: id,
           imgUrls: imgUrls,
@@ -20,4 +21,5 @@ class OrderItem extends MenuItem {
           category: category,
         );
   List<MenuExtraItem> extras;
+  Restaurant restaurant;
 }
