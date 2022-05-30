@@ -1,14 +1,14 @@
 part of entities;
 
 class UserEmail {
-  final String email;
+  String email;
   UserEmail({required this.email});
 }
 
 class NewUser extends UserEmail {
-  final String userName;
-  final String password;
-  final String confirmPassword;
+  String userName;
+  String password;
+  String confirmPassword;
 
   NewUser(
       {required this.userName,
@@ -19,7 +19,7 @@ class NewUser extends UserEmail {
 }
 
 class User extends UserEmail {
-  final String id;
+  String id;
   User({
     required String email,
     required this.id,
@@ -27,7 +27,7 @@ class User extends UserEmail {
 }
 
 class SignInUser extends UserEmail {
-  final String password;
+  String password;
 
   SignInUser({required String email, required this.password})
       : super(email: email);

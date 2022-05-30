@@ -1,12 +1,12 @@
 part of entities;
 
 class Restaurant {
-  final String url;
-  final String name;
-  final String description;
-  final String phoneNumber;
-  final String logo;
-  final Menu menu;
+  String url;
+  String name;
+  String description;
+  String phoneNumber;
+  String logo;
+  Menu menu;
 
   Restaurant({
     required this.url,
