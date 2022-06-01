@@ -7,6 +7,7 @@ class Restaurant {
   String phoneNumber;
   String logo;
   Menu menu;
+  Address address;
 
   Restaurant({
     required this.url,
@@ -15,12 +16,13 @@ class Restaurant {
     required this.phoneNumber,
     required this.logo,
     required this.menu,
+    required this.address,
   });
 }
 
 class CustomRestaurant extends Restaurant {
-  BasicCustomColors basicCustomColors;
-  BasicCustomFonts customFonts;
+  DominantColors dominantColors;
+  CustomFonts customFonts;
 
   CustomRestaurant({
     required String url,
@@ -29,7 +31,8 @@ class CustomRestaurant extends Restaurant {
     required String phoneNumber,
     required String logo,
     required Menu menu,
-    required this.basicCustomColors,
+    required Address address,
+    required this.dominantColors,
     required this.customFonts,
   }) : super(
           url: url,
@@ -38,5 +41,28 @@ class CustomRestaurant extends Restaurant {
           phoneNumber: phoneNumber,
           logo: logo,
           menu: menu,
+          address: address,
         );
+}
+
+class Address {
+  String zipCode;
+  String country;
+  String state;
+  String city;
+  String neighborhood;
+  String street;
+  String buildingNumber;
+  String complement;
+
+  Address(
+    this.zipCode,
+    this.country,
+    this.state,
+    this.city,
+    this.neighborhood,
+    this.street,
+    this.buildingNumber,
+    this.complement,
+  );
 }
