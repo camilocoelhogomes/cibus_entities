@@ -8,4 +8,4 @@ part 'custom_fonts.dart';
 part 'order_item.dart';
 part 'order.dart';
 part 'banner.dart';
-part 'layout_1.dart';
+part 'layout_config.dart';

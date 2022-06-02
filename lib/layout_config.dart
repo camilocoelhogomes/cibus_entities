@@ -1,27 +1,30 @@
 part of entities;
 
-class Layout1 {
+class LayoutConfig {
   static int numberOfBanners = 3;
-  TopBarColors topBarColors;
+  static List<String> styles = ['fastfood'];
+  TopBarConfig topBarConfig;
   List<Banner> banners;
 
-  Layout1(this.topBarColors, this.banners);
+  LayoutConfig(this.topBarConfig, this.banners);
 }
 
-class TopBarColors {
+class TopBarConfig {
   int topBarHeadlineColor;
   int topBarCaptionColor;
+  bool enabled;
 
-  TopBarColors({
+  TopBarConfig({
     this.topBarHeadlineColor = 452984831,
     this.topBarCaptionColor = 452984831,
+    this.enabled = true,
   });
-  TopBarColors copyWith({
+  TopBarConfig copyWith({
     int? topBarHeadlineColor,
     int? topBarCaptionColor,
     int? topBarBackgroundColor,
   }) {
-    return TopBarColors(
+    return TopBarConfig(
       topBarHeadlineColor: topBarHeadlineColor ?? this.topBarHeadlineColor,
       topBarCaptionColor: topBarCaptionColor ?? this.topBarCaptionColor,
     );
