@@ -9,3 +9,4 @@ part 'order_item.dart';
 part 'order.dart';
 part 'banner.dart';
 part 'layout_config.dart';
+part 'background_config.dart';

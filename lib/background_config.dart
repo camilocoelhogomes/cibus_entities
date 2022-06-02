@@ -1,3 +1,5 @@
+part of entities;
+
 class BackgroundConfig {
   String? pageBackgroundColor;
   String? headerBackgroundColor;

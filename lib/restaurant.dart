@@ -22,6 +22,7 @@ class Restaurant {
 
 class CustomRestaurant extends Restaurant {
   DominantColors dominantColors;
+  LayoutConfig layoutConfig;
   CustomFonts customFonts;
 
   CustomRestaurant({
@@ -34,6 +35,7 @@ class CustomRestaurant extends Restaurant {
     required Address address,
     required this.dominantColors,
     required this.customFonts,
+    required this.layoutConfig,
   }) : super(
           url: url,
           name: name,

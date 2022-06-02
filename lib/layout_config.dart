@@ -4,9 +4,10 @@ class LayoutConfig {
   static int numberOfBanners = 3;
   static List<String> styles = ['fastfood'];
   TopBarConfig topBarConfig;
+  BackgroundConfig backgroundConfig;
   List<Banner> banners;
 
-  LayoutConfig(this.topBarConfig, this.banners);
+  LayoutConfig(this.topBarConfig, this.banners, this.backgroundConfig);
 }
 
 class TopBarConfig {
