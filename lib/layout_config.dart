@@ -5,7 +5,7 @@ class LayoutConfig {
   static List<String> styles = ['fastfood'];
   TopBarConfig topBarConfig;
   BackgroundConfig backgroundConfig;
-  List<Banner> banners;
+  List<MarketingBanner> banners;
 
   LayoutConfig(this.topBarConfig, this.banners, this.backgroundConfig);
 }

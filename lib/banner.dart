@@ -1,7 +1,7 @@
 part of entities;
 
-class Banner {
-  static List<String> types = ['full', 'small', 'stripe'];
+class MarketingBanner {
+  static List<String> types = ['full', 'medium', 'small', 'stripe'];
 
   String name;
   String title;
@@ -10,7 +10,7 @@ class Banner {
   String imageUrl;
   String type;
 
-  Banner(
+  MarketingBanner(
     this.name,
     this.isActive,
     this.linkToRedirect,
