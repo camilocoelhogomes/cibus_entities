@@ -10,3 +10,5 @@ part 'order.dart';
 part 'banner.dart';
 part 'layout_config.dart';
 part 'background_config.dart';
+part 'address.dart';
+part 'visual_config.dart';

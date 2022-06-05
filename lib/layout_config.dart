@@ -1,13 +1,20 @@
 part of entities;
 
 class LayoutConfig {
-  static int numberOfBanners = 3;
-  static List<String> styles = ['fastfood'];
-  TopBarConfig topBarConfig;
+  static List<String> layoutDistributions = ['fastfood'];
+  String layoutDistribution;
+  DominantColors dominantColors;
   BackgroundConfig backgroundConfig;
-  List<MarketingBanner> banners;
+  CustomFonts customFonts;
+  TopBarConfig topBarConfig;
 
-  LayoutConfig(this.topBarConfig, this.banners, this.backgroundConfig);
+  LayoutConfig(
+    this.topBarConfig,
+    this.layoutDistribution,
+    this.backgroundConfig,
+    this.customFonts,
+    this.dominantColors,
+  );
 }
 
 class TopBarConfig {
