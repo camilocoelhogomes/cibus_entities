@@ -1,15 +1,15 @@
 part of entities;
 
 class VisualConfig {
-  final String logo;
-  final LayoutConfig layoutConfig;
-  final List<MarketingBanner> banners;
-  final List<SocialMedia> socialMedias;
+  String logo;
+  LayoutConfig layoutConfig;
+  List<MarketingBanner> marketingBanners;
+  List<SocialMedia> socialMedias;
 
   VisualConfig(
     this.logo,
     this.layoutConfig,
-    this.banners,
+    this.marketingBanners,
     this.socialMedias,
   );
 }

@@ -5,7 +5,7 @@ class BackgroundConfig {
   String? footerBackgroundColor;
 
   BackgroundConfig({
-    this.pageBackgroundColor,
-    this.footerBackgroundColor,
+    this.pageBackgroundColor = 'FFFFFF',
+    this.footerBackgroundColor = 'FFFFFF',
   });
 }
