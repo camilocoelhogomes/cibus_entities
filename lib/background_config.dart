@@ -2,14 +2,10 @@ part of entities;
 
 class BackgroundConfig {
   String? pageBackgroundColor;
-  String? headerBackgroundColor;
-  String? headerBackgroundImage;
-  String? pageBackgroundImage;
+  String? footerBackgroundColor;
 
   BackgroundConfig({
     this.pageBackgroundColor,
-    this.headerBackgroundColor,
-    this.headerBackgroundImage,
-    this.pageBackgroundImage,
+    this.footerBackgroundColor,
   });
 }

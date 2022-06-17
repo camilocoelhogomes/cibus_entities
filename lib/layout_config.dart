@@ -5,7 +5,7 @@ class LayoutConfig {
   String layoutDistribution;
   DominantColors dominantColors;
   BackgroundConfig backgroundConfig;
-  CustomFonts customFonts;
+  Fonts customFonts;
   TopBarConfig topBarConfig;
 
   LayoutConfig(
@@ -15,26 +15,4 @@ class LayoutConfig {
     this.customFonts,
     this.dominantColors,
   );
-}
-
-class TopBarConfig {
-  int topBarHeadlineColor;
-  int topBarCaptionColor;
-  bool enabled;
-
-  TopBarConfig({
-    this.topBarHeadlineColor = 452984831,
-    this.topBarCaptionColor = 452984831,
-    this.enabled = true,
-  });
-  TopBarConfig copyWith({
-    int? topBarHeadlineColor,
-    int? topBarCaptionColor,
-    int? topBarBackgroundColor,
-  }) {
-    return TopBarConfig(
-      topBarHeadlineColor: topBarHeadlineColor ?? this.topBarHeadlineColor,
-      topBarCaptionColor: topBarCaptionColor ?? this.topBarCaptionColor,
-    );
-  }
 }

@@ -22,7 +22,7 @@ class Restaurant {
 
 class CustomRestaurant extends Restaurant {
   DominantColors dominantColors;
-  CustomFonts customFonts;
+  Fonts customFonts;
 
   CustomRestaurant({
     required String url,

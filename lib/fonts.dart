@@ -1,18 +1,18 @@
 part of entities;
 
-class CustomFonts {
+class Fonts {
   String primaryFontName;
   String headersFontName;
-  CustomFonts({
-    this.primaryFontName = 'Inter',
-    this.headersFontName = 'Inter',
+  Fonts({
+    this.primaryFontName = 'PT Sans Narrow',
+    this.headersFontName = 'PT Sans Narrow',
   });
 
-  CustomFonts copyWith({
+  Fonts copyWith({
     String? headersFontName,
     String? primaryFontName,
   }) {
-    return CustomFonts(
+    return Fonts(
       headersFontName: headersFontName ?? this.headersFontName,
       primaryFontName: primaryFontName ?? this.primaryFontName,
     );
@@ -23,6 +23,7 @@ class CustomFonts {
     'Lato',
     'Merriweather',
     'PT Sans',
+    'PT Sans Narrow',
     'Open Sans',
     'Oswald',
     'Poppins',
