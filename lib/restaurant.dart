@@ -21,7 +21,7 @@ class Restaurant {
 }
 
 class CustomRestaurant extends Restaurant {
-  VisualConfig layoutConfig;
+  VisualConfig visualConfig;
 
   CustomRestaurant({
     required String url,
@@ -31,7 +31,7 @@ class CustomRestaurant extends Restaurant {
     required String logo,
     required Menu menu,
     required Address address,
-    required this.layoutConfig,
+    required this.visualConfig,
   }) : super(
           url: url,
           name: name,
