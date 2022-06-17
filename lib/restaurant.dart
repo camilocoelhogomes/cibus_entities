@@ -21,7 +21,7 @@ class Restaurant {
 }
 
 class CustomRestaurant extends Restaurant {
-  LayoutConfig layoutConfig;
+  VisualConfig layoutConfig;
 
   CustomRestaurant({
     required String url,
