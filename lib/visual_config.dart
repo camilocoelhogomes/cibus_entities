@@ -14,13 +14,10 @@ class VisualConfig {
   );
 }
 
+enum SocialMedias { instagram, facebook, whatsapp, linkedin, twitter, youtube }
+
 class SocialMedia {
-  static List<String> types = [
-    'instagram',
-    'whatsapp',
-    'facebook',
-  ];
-  final String type;
+  final SocialMedias type;
   final String link;
 
   SocialMedia(this.type, this.link);
