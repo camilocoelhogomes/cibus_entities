@@ -5,7 +5,6 @@ class Restaurant {
   String name;
   String description;
   String phoneNumber;
-  String logo;
   Menu menu;
   Address address;
 
@@ -14,7 +13,6 @@ class Restaurant {
     required this.name,
     required this.description,
     required this.phoneNumber,
-    required this.logo,
     required this.menu,
     required this.address,
   });
@@ -28,7 +26,6 @@ class CustomRestaurant extends Restaurant {
     required String name,
     required String description,
     required String phoneNumber,
-    required String logo,
     required Menu menu,
     required Address address,
     required this.visualConfig,
@@ -37,7 +34,6 @@ class CustomRestaurant extends Restaurant {
           name: name,
           description: description,
           phoneNumber: phoneNumber,
-          logo: logo,
           menu: menu,
           address: address,
         );
