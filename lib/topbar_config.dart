@@ -7,20 +7,23 @@ class TopBarConfig {
   bool enabled;
 
   TopBarConfig({
-    this.topBarFontColor = '000000',
     this.topBarBackgroundColor = 'C4C4C4',
     this.topBarBackgroundOpacity = 0.8,
+    this.topBarFontColor = '000000',
     this.enabled = true,
   });
   TopBarConfig copyWith({
-    String? topBarFontColor,
     String? topBarBackgroundColor,
+    double? topBarBackgroundOpacity,
+    String? topBarFontColor,
     bool? enabled,
   }) {
     return TopBarConfig(
-      topBarFontColor: topBarFontColor ?? this.topBarFontColor,
       topBarBackgroundColor:
           topBarBackgroundColor ?? this.topBarBackgroundColor,
+      topBarBackgroundOpacity:
+          topBarBackgroundOpacity ?? this.topBarBackgroundOpacity,
+      topBarFontColor: topBarFontColor ?? this.topBarFontColor,
       enabled: enabled ?? this.enabled,
     );
   }
