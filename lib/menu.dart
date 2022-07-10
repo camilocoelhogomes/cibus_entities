@@ -1,5 +1,15 @@
 part of entities;
 
+class ItemPriceVariation {
+  String description;
+  int priceInCents;
+
+  ItemPriceVariation({
+    required this.description,
+    required this.priceInCents,
+  });
+}
+
 class Category {
   int id;
   String name;
@@ -26,14 +36,14 @@ class MenuItem {
   List<String> imgUrls;
   String defaultImgUrl;
   String name;
-  int priceInCents;
+  List<ItemPriceVariation> itemPriceVariations;
   String description;
   MenuItem({
+    required this.itemPriceVariations,
     required this.id,
     required this.imgUrls,
     required this.defaultImgUrl,
     required this.name,
-    required this.priceInCents,
     required this.description,
     required this.category,
   });

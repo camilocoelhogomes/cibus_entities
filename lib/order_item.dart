@@ -6,9 +6,9 @@ class OrderItem extends MenuItem {
     required List<String> imgUrls,
     required String defaultImgUrl,
     required String name,
-    required int priceInCents,
     required String description,
     required Category category,
+    required List<ItemPriceVariation> itemPriceVariations,
     required this.extras,
     required this.restaurant,
   }) : super(
@@ -16,9 +16,9 @@ class OrderItem extends MenuItem {
           imgUrls: imgUrls,
           defaultImgUrl: defaultImgUrl,
           name: name,
-          priceInCents: priceInCents,
           description: description,
           category: category,
+          itemPriceVariations: itemPriceVariations,
         );
   List<MenuExtraItem> extras;
   Restaurant restaurant;
