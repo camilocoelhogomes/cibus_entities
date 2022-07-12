@@ -1,70 +1,66 @@
 part of entities;
 
-class Order {
+abstract class Client {
+  String get notificationDevice;
+  String get deliveryPlace;
+  String get id;
+}
+
+class DigitalClient implements Client {
+  @override
+  String notificationDevice;
+  @override
   String id;
-  String restaurantId;
-  String status;
-  DateTime created;
-  DateTime lastUpdate;
-  List<OrderItem> items;
-  Order({
+  Address address;
+  DigitalClient({
+    required this.notificationDevice,
     required this.id,
-    required this.restaurantId,
-    required this.status,
-    required this.created,
-    required this.lastUpdate,
-    required this.items,
+    required this.address,
   });
+
+  @override
+  String get deliveryPlace {
+    return '${address.street}, n° ${address.buildingNumber},Bairro: ${address.neighborhood}, Cidade: ${address.city}';
+  }
 }
 
-class LocalOrder extends Order {
+class LocalClient implements Client, Model {
+  @override
+  String id;
+  @override
+  String notificationDevice;
   String table;
+  LocalClient({
+    required this.id,
+    required this.notificationDevice,
+    required this.table,
+  });
 
-  LocalOrder(
-      {required String id,
-      required this.table,
-      required String restaurantId,
-      required String status,
-      required DateTime created,
-      required DateTime lastUpdate,
-      required List<OrderItem> items})
-      : super(
-            id: id,
-            restaurantId: restaurantId,
-            status: status,
-            created: created,
-            lastUpdate: lastUpdate,
-            items: items);
+  LocalClient.fromModel(Map<String, dynamic> json)
+      : id = json['id'],
+        notificationDevice = json['notificationDevice'],
+        table = json['table'];
+
+  @override
+  String get deliveryPlace {
+    return table;
+  }
+
+  @override
+  Map<String, dynamic> toModel(Model model) {
+    return {"id": id, "notificationDevice": notificationDevice, "table": table};
+  }
 }
 
-class DigitalOrder extends Order {
-  String street;
-  String city;
-  String cep;
-  String neighborhood;
-  int number;
-  String complement;
-  String reference;
-
-  DigitalOrder({
-    required String id,
-    required String restaurantId,
-    required String status,
-    required DateTime created,
-    required DateTime lastUpdate,
-    required List<OrderItem> items,
-    required this.street,
-    required this.city,
-    required this.cep,
-    required this.neighborhood,
-    required this.number,
-    required this.complement,
-    required this.reference,
-  }) : super(
-            id: id,
-            restaurantId: restaurantId,
-            status: status,
-            created: created,
-            lastUpdate: lastUpdate,
-            items: items);
+class Order {
+  Restaurant restaurant;
+  List<OrderItem> items;
+  Client client;
+  String id;
+  Order({
+    required this.restaurant,
+    required this.items,
+    required this.client,
+    required this.id,
+  });
 }

@@ -1,15 +1,5 @@
 part of entities;
 
-class ItemPriceVariation {
-  String description;
-  int priceInCents;
-
-  ItemPriceVariation({
-    required this.description,
-    required this.priceInCents,
-  });
-}
-
 class Category {
   int id;
   String name;
@@ -27,25 +17,6 @@ class MenuExtraItem {
     required this.name,
     required this.priceInCents,
     required this.applicableCategories,
-  });
-}
-
-class MenuItem {
-  int id;
-  Category category;
-  List<String> imgUrls;
-  String defaultImgUrl;
-  String name;
-  List<ItemPriceVariation> itemPriceVariations;
-  String description;
-  MenuItem({
-    required this.itemPriceVariations,
-    required this.id,
-    required this.imgUrls,
-    required this.defaultImgUrl,
-    required this.name,
-    required this.description,
-    required this.category,
   });
 }
 
@@ -70,11 +41,6 @@ class Menu {
 
   void addCategory(Category category) {
     categories.add(category);
-  }
-
-  void deleteCategory(Category category) {
-    categories.removeWhere((element) => element.id == category.id);
-    menuItems.removeWhere((element) => element.category.id == category.id);
   }
 
   void addMenuItem(MenuItem menuItem) {
