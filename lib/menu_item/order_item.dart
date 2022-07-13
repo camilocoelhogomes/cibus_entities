@@ -23,7 +23,7 @@ class BasicOrderItem implements OrderItem {
   String name;
   @override
   String description;
-  late ItemPriceVariation choosedVariation;
+  ItemVariation choosedVariation;
   BasicOrderItem({
     required this.id,
     required this.imgUrls,
@@ -31,16 +31,11 @@ class BasicOrderItem implements OrderItem {
     required this.name,
     required this.description,
     required this.category,
+    required this.choosedVariation,
   });
 
   @override
   int get price {
     return choosedVariation.priceInCents;
-  }
-
-  void setChoosedVariation(
-      ItemPriceVariation item, List<ItemPriceVariation> itemVariations) {
-    choosedVariation =
-        itemVariations.where((element) => element == item).toList()[0];
   }
 }

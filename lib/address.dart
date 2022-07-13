@@ -1,6 +1,6 @@
 part of entities;
 
-class Address {
+class Address implements Model {
   String zipCode;
   String country;
   String state;
@@ -20,4 +20,18 @@ class Address {
     this.buildingNumber,
     this.complement,
   );
+
+  @override
+  Map<String, dynamic> toModel() {
+    return {
+      "zipCode": zipCode,
+      "country": country,
+      "state": state,
+      "city": city,
+      "neighborhood": neighborhood,
+      "street": street,
+      "buildingNumber": buildingNumber,
+      "complement": complement,
+    };
+  }
 }

@@ -1,6 +1,6 @@
 part of entities;
 
-class VisualConfig {
+class VisualConfig implements Model {
   String logo;
   LayoutConfig layoutConfig;
   List<MarketingBanner> marketingBanners;
@@ -12,6 +12,12 @@ class VisualConfig {
     this.marketingBanners,
     this.socialMedias,
   );
+
+  @override
+  Map<String, dynamic> toModel() {
+    // TODO: implement toModel
+    throw UnimplementedError();
+  }
 }
 
 enum SocialMedias { instagram, facebook, whatsapp, linkedin, twitter, youtube }

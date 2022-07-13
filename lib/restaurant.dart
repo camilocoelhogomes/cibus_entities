@@ -1,6 +1,6 @@
 part of entities;
 
-class Restaurant {
+class Restaurant implements Model {
   String url;
   String name;
   String description;
@@ -16,25 +16,30 @@ class Restaurant {
     required this.menu,
     required this.address,
   });
+
+  @override
+  Map<String, dynamic> toModel() {
+    return {
+      "url": url,
+      "name": name,
+      "description": description,
+      "phoneNumber": phoneNumber,
+      "menu": menu.toModel(),
+      "address": address.toModel(),
+    };
+  }
 }
 
-class CustomRestaurant extends Restaurant {
+class CustomRestaurant implements Model {
   VisualConfig visualConfig;
+  Restaurant restaurant;
+  CustomRestaurant({required this.visualConfig, required this.restaurant});
 
-  CustomRestaurant({
-    required String url,
-    required String name,
-    required String description,
-    required String phoneNumber,
-    required Menu menu,
-    required Address address,
-    required this.visualConfig,
-  }) : super(
-          url: url,
-          name: name,
-          description: description,
-          phoneNumber: phoneNumber,
-          menu: menu,
-          address: address,
-        );
+  @override
+  Map<String, dynamic> toModel() {
+    return {
+      "restaurant": restaurant.toModel(),
+      "visualConfig": visualConfig.toModel()
+    };
+  }
 }
