@@ -15,3 +15,6 @@ part 'layout/visual_config.dart';
 part 'layout/topbar_config.dart';
 part 'menu_item/menu_item.dart';
 part 'model.dart';
+part 'factories/order_item_factory.dart';
+part 'factories/category_factor.dart';
+part 'factories/item_variation_factory.dart';
