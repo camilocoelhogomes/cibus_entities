@@ -19,3 +19,4 @@ part 'factories/order_item_factory.dart';
 part 'factories/category_factory.dart';
 part 'factories/item_variation_factory.dart';
 part 'client.dart';
+part 'factories/restaurant_factory.dart';

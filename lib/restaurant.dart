@@ -1,20 +1,34 @@
 part of entities;
 
-class Restaurant implements Model {
-  String url;
-  String name;
-  String description;
-  String phoneNumber;
-  Menu menu;
-  Address address;
+abstract class Restaurant implements Model {
+  String get url;
+  String get name;
+  String get description;
+  String get phoneNumber;
+  Menu get menu;
+  Address get address;
+}
 
-  Restaurant({
-    required this.url,
-    required this.name,
-    required this.description,
-    required this.phoneNumber,
-    required this.menu,
+class BasicRestaurant implements Restaurant {
+  @override
+  Address address;
+  @override
+  String description;
+  @override
+  Menu menu;
+  @override
+  String name;
+  @override
+  String phoneNumber;
+  @override
+  String url;
+  BasicRestaurant({
     required this.address,
+    required this.description,
+    required this.menu,
+    required this.name,
+    required this.phoneNumber,
+    required this.url,
   });
 
   @override
