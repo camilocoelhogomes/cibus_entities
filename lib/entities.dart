@@ -13,3 +13,4 @@ part 'background_config.dart';
 part 'address.dart';
 part 'visual_config.dart';
 part 'topbar_config.dart';
+part 'opening_hour.dart';

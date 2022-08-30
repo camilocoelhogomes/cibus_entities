@@ -7,8 +7,10 @@ class Restaurant {
   String phoneNumber;
   Menu menu;
   Address address;
+  List<OpeningHour> openingHours;
 
   Restaurant({
+    required this.openingHours,
     required this.url,
     required this.name,
     required this.description,
@@ -28,13 +30,14 @@ class CustomRestaurant extends Restaurant {
     required String phoneNumber,
     required Menu menu,
     required Address address,
+    required List<OpeningHour> openingHours,
     required this.visualConfig,
   }) : super(
-          url: url,
-          name: name,
-          description: description,
-          phoneNumber: phoneNumber,
-          menu: menu,
-          address: address,
-        );
+            url: url,
+            name: name,
+            description: description,
+            phoneNumber: phoneNumber,
+            menu: menu,
+            address: address,
+            openingHours: openingHours);
 }
