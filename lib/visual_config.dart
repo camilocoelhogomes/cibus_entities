@@ -17,8 +17,8 @@ class VisualConfig {
 enum SocialMedias { instagram, facebook, whatsapp, linkedin, twitter, youtube }
 
 class SocialMedia {
-  final SocialMedias type;
-  final String link;
+  SocialMedias type;
+  String link;
 
   SocialMedia(this.type, this.link);
 }
